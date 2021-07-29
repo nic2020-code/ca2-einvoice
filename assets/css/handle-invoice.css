@@ -1,0 +1,26 @@
+/* Tabulator */
+#delete-table .tabulator-col:nth-child(1) .tabulator-col-content {
+  display: flex;
+  justify-content: center;
+}
+
+#delete-modal-table .tabulator-col:nth-child(1) .tabulator-col-content {
+  display: flex;
+  justify-content: center;
+}
+
+#change-table .tabulator-col:nth-child(1) .tabulator-col-content {
+  display: flex;
+  justify-content: center;
+}
+
+#cancel-table .tabulator-col:nth-child(1) .tabulator-col-content {
+  display: flex;
+  justify-content: center;
+}
+
+.tabulator {
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}

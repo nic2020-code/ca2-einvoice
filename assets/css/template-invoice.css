@@ -1,0 +1,20 @@
+/* Tabulator */
+.tabulator-col:nth-child(1) .tabulator-col-content {
+  display: flex;
+  justify-content: center;
+}
+
+.tabulator {
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  border: none !important;
+}
+
+.tabulator-headers .tabulator-col {
+  border-right: 1px dashed #dfe1e5;
+}
+
+.tabulator-row .tabulator-cell {
+  border-right: 1px dashed #dfe1e5;
+}

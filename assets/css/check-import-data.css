@@ -1,0 +1,5 @@
+/* Tabulator */
+.tabulator-col:nth-child(1) .tabulator-col-content {
+  display: flex;
+  justify-content: center;
+}

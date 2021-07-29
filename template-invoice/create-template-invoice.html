@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../build/styles.css">
+    <style>
+        .slidecontainer {
+            width: 100%;
+        }
+
+        .slider {
+            -webkit-appearance: none;
+            width: 60%;
+            height: 5px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .slider:hover {
+            opacity: 1;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background: #6B778C;
+            border: 2px solid #DFE1E5;
+            cursor: pointer;
+        }
+
+        .slider::-moz-range-thumb {
+            width: 12px;
+            height: 12px;
+            border-radius: 100%;
+            background: #6B778C;
+            border: 2px solid #DFE1E5;
+            cursor: pointer;
+        }
+    </style>
+    <title>Tạo mẫu hóa đơn</title>
+</head>
+
+<body class="bg-gray-200">
+    <header class="bg-white shadow flex h-16 items-center justify-between relative z-10">
+        <div class="ml-8 text-lg text-blue-900 font-medium">Tạo mẫu hóa đơn</div>
+        <div class="flex items-center">
+            <button class="h-8 w-28 mr-3 focus:outline-none font-medium text-sm bg-blue-900 text-white rounded">
+                Tạo mới
+            </button>
+            <a href="../template-invoice.html">
+                <div class=" text-blue-900 w-16 h-16 flex items-center justify-center cursor-pointer">
+                    <i class="fas fa-times fa-lg"></i>
+                </div>
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="flex">
+            <div class="w-1/5 bg-white">
+                <div class="overflow-auto h-screen">
+                    <div id="tab" class="h-11 flex">
+                        <a href="#tab-pane1" class="btn btn-active">
+                            Thiết lập
+                        </a>
+                        <a href="#tab-pane2" class="btn btn-deactive">
+                            Hình nền
+                        </a>
+                        <a href="#tab-pane3" class="btn btn-deactive">
+                            Tùy chỉnh
+                        </a>
+                    </div>
+                    <div id="tab-content">
+                        <div id="tab-pane1" class="tab-pane block">
+                            <div class="p-8">
+                                <div class="text-base font-medium text-blue-900">
+                                    <span class="mr-1"><i class="fas fa-file"></i></span>
+                                    Mẫu hóa đơn
+                                </div>
+                                <div class="pt-5 pb-8 border-b border-gray-300">
+                                    <div class="text-xs text-gray-400 mb-1">Tên mẫu hóa đơn*</div>
+                                    <div class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center p-2">
+                                        <input
+                                            class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                            type="text" />
+                                    </div>
+                                    <div class="flex items-end mt-4 mb-4">
+                                        <div class="w-20">
+                                            <div class="text-xs text-gray-400 mb-1">Số thứ tự*</div>
+                                            <div
+                                                class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center p-2">
+                                                <input
+                                                    class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                                    type="text" />
+                                            </div>
+                                        </div>
+                                        <div class="w-6 h-8 flex items-center justify-center"><i
+                                                class="fas fa-arrow-right fa-xs"></i></div>
+                                        <div class="w-36">
+                                            <div class="text-xs text-gray-400 mb-1">Mẫu số</div>
+                                            <div
+                                                class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center p-2">
+                                                <input
+                                                    class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                                    type="text" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-xs text-gray-400 mb-1">Tên mẫu hóa đơn*</div>
+                                    <div class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center p-2">
+                                        <input
+                                            class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                            type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="text-base font-medium text-blue-900 mt-8">
+                                    <span class="mr-1"><i class="fab fa-microblog"></i></span>
+                                    Logo
+                                </div>
+                                <div class="pt-5 pb-8 border-b border-gray-300">
+                                    <div
+                                        class="h-40 border border-dashed border-gray-300 bg-gray-100 flex flex-col items-center justify-center">
+                                        <div class="text-s font-medium text-gray-400 mb-1">Kéo và thả ở đây</div>
+                                        <div class="text-s text-gray-400 mb-0.25">Dung lượng tối đa <strong>1MB</strong>
+                                        </div>
+                                        <div class="text-s text-gray-400">Định dạng <strong>.JPG, . JPEG, .
+                                                PNG</strong></div>
+                                        <button
+                                            class="h-8 w-28 mt-6 focus:outline-none font-medium text-sm bg-gray-200 text-blue-900 rounded">
+                                            Tải lên
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="text-base font-medium text-blue-900 mt-8">
+                                    <span class="mr-1"><i class="fas fa-font"></i></span>
+                                    Phông chữ
+                                </div>
+                                <div class="pt-5 pb-8 border-b border-gray-300">
+                                    <div class="text-xs text-gray-400 mb-1">Phông</div>
+                                    <div class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center pl-2">
+                                        <select name="" id=""
+                                            class="text-gray-500 w-full bg-transparent border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0">
+                                            <option value="">Times New Roman</option>
+                                            <option value="">Roboto</option>
+                                            <option value="">Comic San</option>
+                                        </select>
+                                    </div>
+                                    <div class="mt-4 flex">
+                                        <div class="w-36">
+                                            <div class="text-xs text-gray-400 mb-1">Màu sắc</div>
+                                            <div
+                                                class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center pl-2 relative">
+                                                <input
+                                                    class="text-gray-500 bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                                    type="text" value="#172B4D" />
+                                                <div class="absolute right-2 h-4 w-4 bg-gray-800"></div>
+                                            </div>
+                                        </div>
+                                        <div class="w-6 h-8"></div>
+                                        <div class="w-20">
+                                            <div class="text-xs text-gray-400 mb-1">Kích cỡ</div>
+                                            <div
+                                                class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center pl-2">
+                                                <select name="" id=""
+                                                    class="text-gray-500 w-full bg-transparent border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0">
+                                                    <option value="">16</option>
+                                                    <option value="">18</option>
+                                                    <option value="">20</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-base font-medium text-blue-900 mt-8">
+                                    <span class="mr-1"><i class="fas fa-sliders-h"></i></span>
+                                    Cài đặt
+                                </div>
+                                <div class="pt-5 pb-8 border-b border-gray-300">
+                                    <div>
+                                        <label class="inline-flex items-center mb-2">
+                                            <input type="checkbox"
+                                                class="rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                            <span class="ml-2 text-s text-blue-900">Hiển thị QR Code</span>
+                                        </label>
+                                        <label class="inline-flex items-center mb-2">
+                                            <input type="checkbox"
+                                                class="rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                            <span class="ml-2 text-s text-blue-900">Lặp thông tin đối với nhiều
+                                                trang</span>
+                                        </label>
+                                        <label class="inline-flex items-center">
+                                            <input type="checkbox"
+                                                class="rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                            <span class="ml-2 text-s text-blue-900">Hiển thị số cột</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="text-base font-medium text-blue-900 mt-8">
+                                    <span class="mr-1"><i class="fas fa-table"></i></span>
+                                    Thiết lập bảng tính
+                                </div>
+                                <div class="pt-5 pb-8 flex justify-between items-center">
+                                    <div class="text-s text-gray-400 w-2/3">Tổng số dòng</div>
+                                    <div
+                                        class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center pl-2 w-1/3">
+                                        <input
+                                            class="text-gray-500 bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                            type="text" value="18" />
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-pane2" class="tab-pane hidden">
+                            <div class="py-8 px-7">
+                                <div class="text-base font-medium text-blue-900">
+                                    <span class="mr-1"><i class="fas fa-border-style"></i></span>
+                                    Thiết lập đường viền
+                                </div>
+                                <div class="pt-5 pb-8 border-b border-gray-300">
+                                    <label class="inline-flex items-center mb-5">
+                                        <input type="checkbox"
+                                            class="rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                        <span class="ml-2 text-s text-blue-900">Sử dụng đường viền</span>
+                                    </label>
+                                    <div class="bg-gray-100 border rounded border-gray-200 h-12 flex items-center pl-2">
+                                        <select name="" id=""
+                                            class="text-blue-900 w-full bg-transparent border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0">
+                                            <option value="">Viền 01</option>
+                                            <option value="">Viền 02</option>
+                                            <option value="">Viền 03</option>
+                                            <option value="">Viền 04</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="text-base font-medium text-blue-900 pt-8">
+                                    <span class="mr-1"><i class="fas fa-file-image"></i></span>
+                                    Thiết lập hình nền
+                                </div>
+                                <div class="pt-5 pb-8">
+                                    <label class="inline-flex items-center mb-4">
+                                        <input type="checkbox"
+                                            class="rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                        <span class="ml-2 text-s text-blue-900">Sử dụng hình nền mặc định</span>
+                                    </label>
+                                    <div>
+                                        <div
+                                            class="bg-gray-100 border rounded border-gray-200 h-12 flex items-center pl-2 mb-6">
+                                            <select name="" id=""
+                                                class="text-blue-900 w-full bg-transparent border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0">
+                                                <option value="">Nền phong thủy mệnh Thổ</option>
+                                                <option value="">Nền phong thủy mệnh Thổ</option>
+                                                <option value="">Nền phong thủy mệnh Thổ</option>
+                                                <option value="">Nền phong thủy mệnh Thổ</option>
+                                            </select>
+                                        </div>
+                                        <span class="text-s text-blue-900 mb-4">Độ nét</span>
+                                        <div class="slidecontainer flex items-center justify-between">
+                                            <input type="range" min="1" max="100" value="50" class="slider"
+                                                id="myRange">
+                                            <div
+                                                class="border rounded border-gray-200 h-8 flex items-center justify-end pr-2 w-16">
+                                                <span class="text-s text-blue-900" id="demo"></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <label class="inline-flex items-center mt-9">
+                                        <input type="checkbox"
+                                            class="rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                        <span class="ml-2 text-s text-blue-900">Sử dụng hình nền tùy chỉnh</span>
+                                    </label>
+                                    <div class="pt-5 pb-6">
+                                        <div
+                                            class="h-64 border border-dashed border-gray-300 bg-gray-100 flex flex-col items-center justify-center">
+                                            <span class="mb-4 text-blue-900"><i class="fas fa-upload fa-2x"></i></span>
+                                            <div class="text-s font-medium text-gray-400 mb-1">Kéo và thả ở đây</div>
+                                            <div class="text-s text-gray-400 mb-0.25">Dung lượng tối đa
+                                                <strong>1MB</strong>
+                                            </div>
+                                            <div class="text-s text-gray-400">Định dạng <strong>.XSLT</strong></div>
+                                            <button
+                                                class="h-8 w-28 mt-6 focus:outline-none font-medium text-sm bg-gray-200 text-blue-900 rounded">
+                                                Tải file lên
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <span class="text-s text-blue-900">Vị trí</span>
+                                        <div class="p-0.5 border rounded border-gray-200 h-8 flex items-center mt-3">
+                                            <button
+                                                class="w-1/2 h-full focus:outline-none text-s bg-gray-400 text-white rounded-sm">
+                                                <span class="mr-1"><i class="fas fa-expand"></i></span>
+                                                Toàn trang
+                                            </button>
+                                            <button
+                                                class="w-1/2 h-full focus:outline-none text-s bg-white text-gray-400 rounded-sm">
+                                                Chính giữa
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-pane3" class="tab-pane hidden">
+                            <div class="pt-5 px-3 pb-4 border-gray-300 border-b">
+                                <div class="flex">
+                                    <div
+                                        class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center pl-2 w-4/6 mr-2">
+                                        <select name="" id=""
+                                            class="text-gray-500 w-full bg-transparent border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0">
+                                            <option value="">Times New Roman</option>
+                                            <option value="">Roboto</option>
+                                            <option value="">Comic San</option>
+                                        </select>
+                                    </div>
+                                    <div
+                                        class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center pl-2 w-2/6">
+                                        <select name="" id=""
+                                            class="text-gray-500 w-full bg-transparent border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0">
+                                            <option value="">16</option>
+                                            <option value="">18</option>
+                                            <option value="">20</option>
+                                        </select>
+                                    </div>
+                                    <div class="w-1/6 flex justify-end">
+                                        <div class="h-8 w-8 bg-blue-900 rounded"></div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between mt-2">
+                                    <div class="flex items-center">
+                                        <div
+                                            class="rounded-sm hover:bg-gray-100 h-8 w-8 flex items-center justify-center mr-1">
+                                            <span class="text-gray-400"><i class="fas fa-bold fa-sm"></i></span>
+                                        </div>
+                                        <div
+                                            class="rounded-sm hover:bg-gray-100 h-8 w-8 flex items-center justify-center mr-1">
+                                            <span class="text-gray-400"><i class="fas fa-italic fa-sm"></i></span>
+                                        </div>
+                                        <div
+                                            class="rounded-sm hover:bg-gray-100 h-8 w-8 flex items-center justify-center mr-1">
+                                            <span class="text-gray-400"><i class="fas fa-underline fa-sm"></i></span>
+                                        </div>
+                                        <div
+                                            class="rounded-sm h-8 w-8 flex items-center justify-center mr-1 bg-blue-200">
+                                            <span class="text-blue-600"><i class="fas fa-outdent fa-sm"></i></span>
+                                        </div>
+                                        <div
+                                            class="rounded-sm hover:bg-gray-100 h-8 w-8 flex items-center justify-center mr-1">
+                                            <span class="text-gray-400"><i class="fas fa-indent fa-sm"></i></span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div
+                                            class="bg-gray-100 border rounded border-gray-200 h-8 w-8 flex items-center justify-center hover:bg-gray-200">
+                                            <span class="text-gray-400"><i class="fas fa-trash fa-sm"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="py-4 border-b border-dashed border-gray-300">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox"
+                                            class="ml-3 mr-3 rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                        <div
+                                            class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center p-2 w-60 mr-3">
+                                            <input
+                                                class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                                type="text" />
+                                        </div>
+                                        <span><i class="fas fa-bars fa-xs"></i></span>
+                                    </label>
+                                </div>
+                                <div class="py-4 border-b border-dashed border-gray-300">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox"
+                                            class="ml-3 mr-3 rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                        <div
+                                            class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center p-2 w-60 mr-3">
+                                            <input
+                                                class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                                type="text" />
+                                        </div>
+                                        <span><i class="fas fa-bars fa-xs"></i></span>
+                                    </label>
+                                </div>
+                                <div class="py-4 border-b border-dashed border-gray-300">
+                                    <label class="inline-flex items-center">
+                                        <input type="checkbox"
+                                            class="ml-3 mr-3 rounded border-gray-300 text-blue-900 shadow-sm focus:border-blue-300 focus:ring focus:ring-offset-0 focus:ring-blue-200 focus:ring-opacity-50">
+                                        <div
+                                            class="bg-gray-100 border rounded border-gray-200 h-8 flex items-center p-2 w-60 mr-3">
+                                            <input
+                                                class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-s p-0"
+                                                type="text" />
+                                        </div>
+                                        <span><i class="fas fa-bars fa-xs"></i></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="flex justify-end">
+                                <a href="#" class="text-blue-600 p-2">
+                                    <span class="mr-1"><i class="fas fa-plus fa-sm"></i></span>
+                                    Thêm
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-4/5 overflow-auto h-screen">
+                <div class="flex flex-col items-center justify-center">
+                    <div>
+                        <div class="flex justify-between items-center mt-11 mb-4">
+                            <a href="#">
+                                <div class="h-8 flex items-center justify-center text-blue-900 text-s font-medium">
+                                    <span class="mr-2"><i class="fas fa-print"></i></span>
+                                    Xuất PDF
+                                </div>
+                            </a>
+                            <div>
+                                <button
+                                    class="h-8 w-40 mr-3 focus:outline-none font-medium text-s bg-gray-500 text-white rounded-2xl">
+                                    Hóa đơn mẫu
+                                </button>
+                                <button
+                                    class="h-8 w-40 focus:outline-none font-medium text-s bg-white text-blue-900 rounded-2xl">
+                                    Hóa đơn chuyển đổi
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mb-24"><img src="../assets/img/template-invoice2.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../assets/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/create-template-invoice.js"></script>
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value + "%";
+
+        slider.oninput = function () {
+            output.innerHTML = this.value + "%";
+        }
+    </script>
+</body>
+
+</html>

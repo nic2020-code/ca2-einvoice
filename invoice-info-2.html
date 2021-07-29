@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/svg/favicon.ico">
+    <link rel="stylesheet" href="./build/styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Thông tin hóa đơn</title>
+</head>
+
+<body class="bg-gray-200">
+
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div>
+        <nav class="bg-blue-900">
+            <div>
+                <div class="flex items-center justify-between h-14">
+                    <div class="flex h-full">
+                        <div class="flex justify-center items-center w-14 bg-blue-700">
+                            <img class="h-6 w-6" src="./assets/svg/logo.svg" alt="Workflow">
+                        </div>
+                        <div class="flex justify-center items-center w-36 border-r border-opacity-25">
+                            <img src="./assets/svg/ca2-einvoice.svg" alt="Workflow">
+                        </div>
+                        <button class="hover:bg-gray-500 h-full w-14 text-gray-400 hover:text-white focus:outline-none">
+                            <!-- <span class="sr-only">View notifications</span>
+                    Heroicon name: outline/bell -->
+                            <span class="text-white"><i class="fas fa-bars fa-md"></i></span>
+                        </button>
+                        <div class="text-white items-center flex text-sm">Công ty TNHH PSG</div>
+
+                        <div class="hidden md:block">
+
+                        </div>
+                    </div>
+                    <div class="hidden md:block h-full">
+                        <div class="flex items-center h-full">
+                            <button
+                                class="hover:bg-gray-500 h-full w-14 text-gray-400 hover:text-white focus:outline-none">
+                                <!-- <span class="sr-only">View notifications</span>
+                                Heroicon name: outline/bell -->
+                                <span class="text-white"><i class="fas fa-search fa-md"></i></span>
+                            </button>
+
+                            <button
+                                class="hover:bg-gray-500 h-full w-14 text-gray-400 hover:text-white focus:outline-none">
+                                <!-- <span class="sr-only">View notifications</span>
+                            Heroicon name: outline/bell -->
+                                <span class="text-white"><i class="fas fa-plus-circle fa-md"></i></span>
+                            </button>
+
+                            <button
+                                class="hover:bg-gray-500 h-full w-14 text-gray-400 hover:text-white focus:outline-none">
+                                <!-- <span class="sr-only">View notifications</span>
+                        Heroicon name: outline/bell -->
+                                <span class="text-white"><i class="fas fa-comments fa-md"></i></span>
+                            </button>
+
+                            <button
+                                class="hover:bg-gray-500 h-full w-14 text-gray-400 hover:text-white focus:outline-none">
+                                <!-- <span class="sr-only">View notifications</span>
+                    Heroicon name: outline/bell -->
+                                <span class="text-white"><i class="fas fa-envelope-open fa-md"></i></span>
+                            </button>
+
+                            <!-- Profile dropdown -->
+                            <div
+                                class="relative w-14 flex justify-center items-center h-full hover:bg-gray-500 cursor-pointer">
+
+                                <span class="text-white"><i class="fas fa-user-circle fa-md"></i></span>
+
+
+
+                                <!--
+                  Dropdown menu, show/hide based on menu state.
+  
+                  Entering: "transition ease-out duration-100"
+                    From: "transform opacity-0 scale-95"
+                    To: "transform opacity-100 scale-100"
+                  Leaving: "transition ease-in duration-75"
+                    From: "transform opacity-100 scale-100"
+                    To: "transform opacity-0 scale-95"
+                -->
+                                <div class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
+                                    role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button"
+                                    tabindex="-1">
+                                    <!-- Active: "bg-gray-100", Not Active: "" -->
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-0">Your Profile</a>
+
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-1">Settings</a>
+
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                                        tabindex="-1" id="user-menu-item-2">Sign out</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="-mr-2 flex md:hidden">
+                        <!-- Mobile menu button -->
+                        <button type="button"
+                            class="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <!--
+                Heroicon name: outline/menu
+  
+                Menu open: "hidden", Menu closed: "block"
+              -->
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            <!--
+                Heroicon name: outline/x
+  
+                Menu open: "block", Menu closed: "hidden"
+              -->
+                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu, show/hide based on menu state. -->
+            <div class="md:hidden" id="mobile-menu">
+                <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                    <a href="#"
+                        class="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium">Dashboard</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Projects</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Calendar</a>
+
+                    <a href="#"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Reports</a>
+                </div>
+                <div class="pt-4 pb-3 border-t border-gray-700">
+                    <div class="flex items-center px-5">
+                        <div class="flex-shrink-0">
+                            <img class="h-10 w-10 rounded-full"
+                                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                                alt="">
+                        </div>
+                        <div class="ml-3">
+                            <div class="text-base font-medium leading-none text-white">Tom Cook</div>
+                            <div class="text-sm font-medium leading-none text-gray-400">tom@example.com</div>
+                        </div>
+                        <button
+                            class="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none">
+                            <span class="sr-only">View notifications</span>
+                            <!-- Heroicon name: outline/bell -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="mt-3 px-2 space-y-1">
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Your
+                            Profile</a>
+
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Settings</a>
+
+                        <a href="#"
+                            class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700">Sign
+                            out</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <header class="bg-white shadow">
+            <div class="sm:px-6 lg:px-5 h-14 flex">
+                <a href="./dashboard.html"
+                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
+                    Dashboard
+                </a>
+
+                <a href="#"
+                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm border-b-4 border-blue-900 font-medium text-blue-900">
+                    Hóa đơn
+                </a>
+
+                <a href="#"
+                    class="flex items-center justify-center h-full w-28 focus:outline-none text-sm text-gray-400">
+                    Xử lý hóa đơn
+                </a>
+
+                <a href="#"
+                    class="flex items-center justify-center h-full w-28 focus:outline-none text-sm text-gray-400">
+                    Mẫu hóa đơn
+                </a>
+
+                <a href="#"
+                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
+                    Báo cáo
+                </a>
+
+                <a href="#"
+                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
+                    Danh mục
+                </a>
+
+                <a href="#"
+                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
+                    Hệ thống
+                </a>
+            </div>
+        </header>
+        <main>
+            <div class="pt-9 px-8">
+                <div>
+                    <a class="text-gray-400 text-xs" href="#">Hóa đơn</a>
+                    <span class="mx-3 text-xs text-gray-400">/</span>
+                    <a class="text-blue-900 font-medium text-xs" href="#">Hóa đơn 1C21TAA/028 - BH/18E</a>
+                </div>
+
+                <div class="flex justify-between mt-4 mb-8">
+                    <div class="text-xl text-blue-900 font-medium">
+                        SỐ HĐ: 0000018
+                        <div class="text-sm font-normal">Hóa đơn gốc</div>
+                    </div>
+                    <div>
+                        <button
+                            class="h-8 w-32 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
+                            <i class="far fa-envelope"></i>
+                            Gửi email
+                        </button>
+
+                        <button
+                            class="ml-3 h-8 w-32 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
+                            <i class="fas fa-print"></i>
+                            In chuyển đổi
+                        </button>
+
+                        <button
+                            class="ml-3 h-8 w-32 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
+                            Xóa bỏ
+                        </button>
+
+                        <button
+                            class="ml-3 h-8 w-32 focus:outline-none font-medium text-sm bg-blue-900 text-white rounded">
+                            Thay thế
+                        </button>
+                    </div>
+                </div>
+
+                <div class="border-t border-b border-dashed border-gray-400 flex">
+                    <a href="./invoice-info.html">
+                        <div class="px-3 py-6 text-base font-medium text-blue-900">Thông tin hóa đơn</div>
+                    </a>
+                    <a href="#">
+                        <div class="px-3 py-6 text-base text-gray-400">Chi tiết hóa đơn</div>
+                    </a>
+                </div>
+
+                <div class="mt-8 bg-white py-6 px-5">
+                    <div class="text-blue-900 text-base font-medium mb-5">Thông tin hóa đơn</div>
+                    <div class="flex">
+                        <div class="w-44 text-sm text-gray-400">Trạng thái:</div>
+                        <div class="font-medium text-sm text-blue-900">Hóa đơn gốc</div>
+                    </div>
+                    <div class="flex mt-4">
+                        <div class="w-44 text-sm text-gray-400">Mẫu số/Ký hiệu:</div>
+                        <div class="font-medium text-sm text-blue-900">1C21TAA/028 - BH/18E </div>
+                    </div>
+                    <div class="flex mt-4">
+                        <div class="w-44 text-sm text-gray-400">Ngày hóa đơn:</div>
+                        <div class="font-medium text-sm text-blue-900">23/06/2020</div>
+                    </div>
+                    <div class="flex mt-4">
+                        <div class="w-44 text-sm text-gray-400">Số hóa đơn:</div>
+                        <div class="font-medium text-sm text-blue-900">0000018</div>
+                    </div>
+                    <div class="flex mt-4">
+                        <div class="w-44 text-sm text-gray-400">Khách hàng:</div>
+                        <div class="font-medium text-sm text-blue-600">Công ty TNHH TM Tổng Hợp Cương Anh</div>
+                    </div>
+                    <div class="flex mt-4">
+                        <div class="w-44 text-sm text-gray-400">Tổng tiền:</div>
+                        <div class="font-medium text-sm text-blue-900">200,000,000 VND</div>
+                    </div>
+                    <div class="flex mt-4">
+                        <div class="w-44 text-sm text-gray-400">Khách hàng ký:</div>
+                        <div class="font-medium text-sm text-blue-900">-</div>
+                    </div>
+                    <div class="border-b border-gray-300 my-6"></div>
+                    <div class="flex">
+                        <div class="w-44 text-sm text-gray-400">Trạng thái chuyển đổi:</div>
+                        <div class="font-medium text-sm text-blue-900">Đã chuyển đổi</div>
+                    </div>
+                    <div class="flex mt-4">
+                        <div class="w-44 text-sm text-gray-400">Người chuyển đổi:</div>
+                        <div class="font-medium text-sm text-blue-900">Nguyễn Giáp Hảo</div>
+                    </div>
+                </div>
+
+                <div class="mt-6 mb-11 bg-white py-7 px-5">
+                    <div class="text-blue-900 text-base font-medium flex justify-between mb-5">
+                        <div>Nhật ký hóa đơn</div>
+                        <button
+                            class="h-8 w-32 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
+                            Xuất Khẩu
+                        </button>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-300 py-4">
+                        <div class="text-sm">
+                            <div class="text-blue-900 font-medium">chrishoang90@gmail.com</div>
+                            <div class="text-gray-400">19/07/2020 - 23:05:00</div>
+                        </div>
+                        <div class="text-sm text-blue-900 text-right">
+                            <div class="font-medium">Phát hành hóa đơn</div>
+                            <div>Phát hành hóa đơn 1C21TAA/028 - BH/18E</div>
+                            <div>số 0000018</div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-300 py-4">
+                        <div class="text-sm">
+                            <div class="text-blue-900 font-medium">chrishoang90@gmail.com</div>
+                            <div class="text-gray-400">19/07/2020 - 23:05:00</div>
+                        </div>
+                        <div class="text-sm text-blue-900 text-right">
+                            <div class="font-medium">Sửa hóa đơn</div>
+                            <a href="#" class="text-blue-600">Xem thông tin sửa chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-300 py-4">
+                        <div class="text-sm">
+                            <div class="text-blue-900 font-medium">chrishoang90@gmail.com</div>
+                            <div class="text-gray-400">19/07/2020 - 23:05:00</div>
+                        </div>
+                        <div class="text-sm text-blue-900 text-right">
+                            <div class="font-medium">Sửa hóa đơn</div>
+                            <a href="#" class="text-blue-600">Xem thông tin sửa chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between border-b border-gray-300 py-4">
+                        <div class="text-sm">
+                            <div class="text-blue-900 font-medium">chrishoang90@gmail.com</div>
+                            <div class="text-gray-400">19/07/2020 - 23:05:00</div>
+                        </div>
+                        <div class="text-sm text-blue-900 text-right">
+                            <div class="font-medium">Sửa hóa đơn</div>
+                            <a href="#" class="text-blue-600">Xem thông tin sửa chi tiết</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-between py-4">
+                        <div class="text-sm">
+                            <div class="text-blue-900 font-medium">chrishoang90@gmail.com</div>
+                            <div class="text-gray-400">19/07/2020 - 23:05:00</div>
+                        </div>
+                        <div class="text-sm text-blue-900 text-right">
+                            <div class="font-medium">Sửa hóa đơn</div>
+                            <a href="#" class="text-blue-600">Xem thông tin sửa chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -4,33 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/svg/favicon.ico">
-    <link rel="stylesheet" href="./build/styles.css">
+    <link rel="shortcut icon" href="/assets/svg/favicon.ico">
+    <link rel="stylesheet" href="/build/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/tabulator/css/semantic-ui/tabulator_semantic-ui.min.css">
-    <style>
-        .tabulator {
-            border-radius: 0 !important;
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            border: none !important;
-        }
-
-        .tabulator-headers .tabulator-col {
-            border-right: 1px dashed #dfe1e5;
-        }
-
-        .tabulator-row .tabulator-cell {
-            border-right: 1px dashed #dfe1e5;
-        }
-
-        .drp-buttons {
-            display: flex !important;
-            align-items: center !important;
-        }
-    </style>
-    <title>Danh mục</title>
+    <title>Hệ thống</title>
 </head>
 
 <body class="bg-gray-200">
@@ -42,10 +20,10 @@
                 <div class="flex items-center justify-between h-14">
                     <div class="flex h-full">
                         <div class="flex justify-center items-center w-14 bg-blue-700">
-                            <img class="h-6 w-6" src="./assets/svg/logo.svg" alt="Workflow">
+                            <img class="h-6 w-6" src="/assets/svg/logo.svg" alt="Workflow">
                         </div>
                         <div class="flex justify-center items-center w-36 border-r border-opacity-25">
-                            <img src="./assets/svg/ca2-einvoice.svg" alt="Workflow">
+                            <img src="/assets/svg/ca2-einvoice.svg" alt="Workflow">
                         </div>
                         <button class="hover:bg-gray-500 h-full w-14 text-gray-400 hover:text-white focus:outline-none">
                             <!-- <span class="sr-only">View notifications</span>
@@ -212,38 +190,38 @@
 
         <header class="bg-white shadow relative z-30">
             <div class="sm:px-6 lg:px-5 h-14 flex">
-                <a href="./dashboard.html"
+                <a href="/dashboard.html"
                     class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
                     Dashboard
                 </a>
 
-                <a href="./einvoice.html"
+                <a href="/einvoice.html"
                     class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
                     Hóa đơn
                 </a>
 
-                <a href="./handle-invoice.html"
+                <a href="/handle-invoice.html"
                     class="flex items-center justify-center h-full w-28 focus:outline-none text-sm text-gray-400">
                     Xử lý hóa đơn
                 </a>
 
-                <a href="./template-invoice.html"
+                <a href="/template-invoice.html"
                     class="flex items-center justify-center h-full w-28 focus:outline-none text-sm text-gray-400">
                     Mẫu hóa đơn
                 </a>
 
-                <a href="./report-invoice.html"
+                <a href="/report-invoice.html"
                     class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
                     Báo cáo
                 </a>
 
-                <a href="./category-invoice.html"
-                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm border-b-4 border-blue-900 font-medium text-blue-900">
+                <a href="/category-invoice.html"
+                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
                     Danh mục
                 </a>
 
-                <a href="./system-invoice.html"
-                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm text-gray-400">
+                <a href="/system-invoice.html"
+                    class="flex items-center justify-center h-full w-24 focus:outline-none text-sm border-b-4 border-blue-900 font-medium text-blue-900">
                     Hệ thống
                 </a>
             </div>
@@ -252,117 +230,200 @@
             <div class="relative">
                 <div class="absolute z-10">
                     <div class="pl-5 pt-9">
-                        <div class="text-blue-900 text-sm font-medium mb-6 pl-4">Danh mục</div>
-                        <a href="./category-invoice.html">
+                        <div class="text-blue-900 text-sm font-medium mb-6 pl-4">Hệ thống</div>
+                        <a href="/template-invoice.html">
+                            <div
+                                class="pl-4 w-56 h-9 items-center rounded-sm flex hover:bg-gray-300 transition duration-200 ease-in text-gray-500">
+                                <span class="mr-4"><i class="far fa-building"></i></span>
+                                <div class="text-s">Công ty & Chi Nhánh</div>
+                            </div>
+                        </a>
+                        <a href="/system-invoice/digital-signature.html">
+                            <div
+                                class="pl-4 w-56 h-9 items-center rounded-sm flex hover:bg-gray-300 transition duration-200 ease-in text-gray-500">
+                                <span class="mr-2.5"><i class="fas fa-signature"></i></span>
+                                <div class="text-s">Chữ ký số</div>
+                            </div>
+                        </a>
+                        <a href="/system-invoice/account-invoice-info.html">
+                            <div
+                                class="pl-4 w-56 h-9 items-center rounded-sm flex hover:bg-gray-300 transition duration-200 ease-in text-gray-500">
+                                <span class="mr-3"><i class="far fa-user-circle"></i></span>
+                                <div class="text-s">Thông tin tài khoản</div>
+                            </div>
+                        </a>
+                        <a href="/system-invoice/user-manager.html">
+                            <div
+                                class="pl-4 w-56 h-9 items-center rounded-sm flex hover:bg-gray-300 transition duration-200 ease-in text-gray-500">
+                                <span class="mr-3"><i class="far fa-user"></i></span>
+                                <div class="text-s text-sm">Quản lý người dùng</div>
+                            </div>
+                        </a>
+                        <a href="/system-invoice/template-email.html">
                             <div
                                 class="pl-4 w-56 h-9 items-center rounded-sm flex bg-gray-300 text-blue-900 font-medium">
-                                <span class="mr-3"><i class="far fa-user-circle"></i></span>
-                                <div class="text-s">Khách hàng</div>
+                                <span class="mr-3"><i class="far fa-envelope"></i></span>
+                                <div class="text-s text-sm">Email gửi hóa đơn</div>
                             </div>
                         </a>
-                        <a href="./category-invoice/product-service.html">
+                        <a href="/system-invoice/access-log.html">
                             <div
                                 class="pl-4 w-56 h-9 items-center rounded-sm flex hover:bg-gray-300 transition duration-200 ease-in text-gray-500">
-                                <span class="mr-3"><i class="far fa-file"></i></span>
-                                <div class="text-s">Sản phẩm & Dịch vụ</div>
+                                <span class="mr-4"><i class="far fa-file-alt"></i></span>
+                                <div class="text-s text-sm">Nhật ký truy cập</div>
                             </div>
                         </a>
-                        <a href="./category-invoice/business-partner.html">
+                        <a href="/system-invoice/app-setting.html">
                             <div
                                 class="pl-4 w-56 h-9 items-center rounded-sm flex hover:bg-gray-300 transition duration-200 ease-in text-gray-500">
-                                <span class="mr-3"><i class="far fa-file"></i></span>
-                                <div class="text-s">Đại lý</div>
+                                <span class="mr-3"><i class="fas fa-sliders-h"></i></span>
+                                <div class="text-s text-sm">Thiết lập thông số</div>
+                            </div>
+                        </a>
+                        <a href="/system-invoice/account-info.html">
+                            <div
+                                class="pl-4 w-56 h-9 items-center rounded-sm flex hover:bg-gray-300 transition duration-200 ease-in text-gray-500">
+                                <span class="mr-3"><i class="fas fa-lock"></i></span>
+                                <div class="text-s text-sm">Thông tin tài khoản</div>
                             </div>
                         </a>
 
                     </div>
                 </div>
                 <div id="right-panel" class="absolute z-20 left-64.5 inset-y-0 right-0">
-                    <div class="bg-white h-screen px-8 pt-9">
+                    <div class="bg-white h-screen px-8 pt-9 overflow-y-scroll">
                         <div id="show-menu-btn"
                             class="transition duration-200 ease-in transform absolute -left-3 top-6 h-6 w-6 shadow flex justify-center items-center rounded-full bg-white cursor-pointer">
                             <i class="fas fa-chevron-left fa-xs"></i>
                         </div>
-                        <div class="flex justify-between mb-8">
-                            <div class="text-xl font-medium text-blue-900">Danh sách khách hàng</div>
-                            <div class="flex">
-                                <a href="#">
-                                    <button
-                                        class="h-8 w-28 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
-                                        Nhập khẩu
-                                    </button>
-                                </a>
-
-                                <a href="./category-invoice/add-new-customer.html">
-                                    <button
-                                        class="h-8 w-28 ml-3 focus:outline-none font-medium text-sm bg-blue-900 text-white rounded">
-                                        Tạo mới
-                                    </button>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="flex mb-8">
-                            <div
-                                class="flex w-1/2 items-center bg-gray-100 h-10 border rounded-sm border-gray-300 pr-8 text-blue-900">
-                                <div class="w-9 h-10 flex items-center justify-center"><i
-                                        class="fas fa-search fa-xs"></i>
+                        <div class="flex justify-between mb-6">
+                            <div class="text-xl font-medium text-blue-900">Email gửi hóa đơn</div>
+                            <!-- <a href="#">
+                                <div
+                                    class="flex items-center justify-center h-8 w-32 focus:outline-none font-medium text-xs bg-blue-900 text-white rounded">
+                                    Thêm người dùng
                                 </div>
+                            </a> -->
+                        </div>
+                        <div class="mb-8">
+                            <a href="../template-email.html">
+                                <button class="mr-8 h-11 focus:outline-none font-medium text-sm text-gray-400">
+                                    Phương thức gửi email
+                                </button>
+                            </a>
+                            <a href="./send-invoice.html">
+                                <button
+                                    class="h-11 focus:outline-none font-medium text-sm text-blue-900 border-b-4 border-blue-900">
+                                    Nội dung email
+                                </button>
+                            </a>
+                        </div>
+                        <div class="mb-8">
+                            <a href="./send-invoice.html">
+                                <button
+                                    class="h-8 w-40 mr-4 focus:outline-none font-medium text-sm bg-blue-900 text-white rounded-2xl">
+                                    <span class="mr-1"><i class="far fa-file"></i></span>
+                                    Gửi hóa đơn
+                                </button>
+                            </a>
+                            <a href="./notice-cancel-invoice.html">
+                                <button
+                                    class="h-8 w-40 focus:outline-none font-medium text-sm text-blue-900 rounded-2xl border border-gray-200">
+                                    <span class="mr-1"><i class="far fa-file"></i></span>
+                                    TB hủy hóa đơn
+                                </button>
+                            </a>
+                        </div>
+                        <div style="width: 47.5rem;">
+                            <div class="text-sm text-gray-400 mb-1.5">Tiêu đề</div>
+                            <div
+                                class="flex items-center bg-gray-100 h-10 border rounded-sm border-gray-300 pl-3 text-blue-900">
                                 <input
                                     class="bg-transparent w-full border-none focus:ring-transparent focus:shadow-none focus:outline-none text-sm p-0 placeholder-gray-300::placeholder"
-                                    type="text" placeholder="Mã số thuế, người/đơn vị mua hàng, email">
+                                    type="text" value="##tendonvi## gửi thông báo phát hành hóa đơn điện tử số ##so##">
                             </div>
-
+                            <div class="bg-gray-300 p-9 mt-6 rounded-sm mb-11">
+                                <div>
+                                    <div class="bg-blue-600 flex justify-between">
+                                        <div class="p-5 flex flex-col justify-between">
+                                            <div><img src="/assets/svg/ca2-einvoice.svg" alt=""></div>
+                                            <div>
+                                                <div class="text-sm text-white mb-0.5">Công ty cổ phần du lịch Thăng
+                                                    Long
+                                                </div>
+                                                <div class="text-xs text-gray-300">Tầng 5, tòa nhà NOVA, phường Trung
+                                                    Tự, Quận Thanh Xuân, Thành Phố Hà Nội, Việt Nam</div>
+                                            </div>
+                                        </div>
+                                        <div><img src="/assets/svg/email-graphic.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="bg-white p-5">
+                                        <div class="mb-5">
+                                            <p class="text-blue-900 text-xs">Chào quý khách,
+                                                <br><br>
+                                                <strong>Công ty cổ phần du lịch Thăng Long</strong> gửi đến quý khách
+                                                hóa đơn điện tử.
+                                                Quý khách vui lòng kiểm tra hóa đơn điện tử bằng cách tải file đính kèm
+                                                và mở file trực tiếp từ thư mục đã tải về trong máy tính. Hoặc tra cứu
+                                                theo đường link <a href="https://ca2-einvoice.vn/tra-cuu"
+                                                    class="text-blue-600">https://ca2-einvoice.vn/tra-cuu</a>
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="border-t border-b border-dashed border-gray-200 py-5 mb-5 flex justify-between">
+                                            <div class="text-xs">
+                                                <div class="text-gray-400">Hóa đơn giá trị gia tăng</div>
+                                                <div class="flex mt-1.5">
+                                                    <div class="w-16 text-gray-400">Số:</div>
+                                                    <div class="text-blue-900">0000341</div>
+                                                </div>
+                                                <div class="flex mt-1.5">
+                                                    <div class="w-16 text-gray-400">Mẫu số:</div>
+                                                    <div class="text-blue-900">1C21TAA/028</div>
+                                                </div>
+                                                <div class="flex mt-1.5">
+                                                    <div class="w-16 text-gray-400">Ký hiệu:</div>
+                                                    <div class="text-blue-900">BH/18E</div>
+                                                </div>
+                                            </div>
+                                            <div class="flex">
+                                                <div class="mr-5 text-right">
+                                                    <div class="text-gray-400 text-xs">Mã tra cứu</div>
+                                                    <div class="text-base font-bold text-blue-900">TFB7Q3W2S9</div>
+                                                    <button
+                                                        class="h-8 w-32 mt-1.5 focus:outline-none font-medium text-xs bg-blue-600 text-white rounded">
+                                                        Tra cứu hóa đơn
+                                                    </button>
+                                                </div>
+                                                <div class="w-20"><img src="/assets/img/qr-code.png" alt=""></div>
+                                            </div>
+                                        </div>
+                                        <p class="text-xs text-blue-900">Quý khách vui lòng kiểm tra, đối chiếu nội dung
+                                            hóa đơn. Việc ký điện tử trên
+                                            hóa đơn có thể thực
+                                            hiện ngay trên cổng tra cứu của <strong>ca2-einvoice.vn</strong></p>
+                                        <div class="flex justify-end text-center my-8 text-xs text-blue-900">Trân trọng
+                                            cảm ơn quý khách!<br>
+                                            Công ty cổ phần du lịch Thăng Long</div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-3 text-xs text-gray-500">Product of NACENCOMM SMART CARD
+                                    TECHNOLOGY JSC. Copyright © 2012 - 2020</div>
+                            </div>
                         </div>
-                        <div id="example-table"></div>
                     </div>
                 </div>
             </div>
         </main>
     </div>
 
-    <script src="./assets/jquery-3.6.0.min.js"></script>
-    <script src="./assets/js/moment.js"></script>
-    <script src="./assets/tabulator/js/tabulator.min.js"></script>
+    <script src="../assets/jquery-3.6.0.min.js"></script>
     <script>
         $("#show-menu-btn").click(function () {
             $("#show-menu-btn").toggleClass("rotate-180");
             $("#right-panel").toggleClass("left-64.5");
             $("#right-panel").toggleClass("left-0");
-        });
-
-        $(function () {
-            $('input[name="daterange"]').daterangepicker({
-                opens: 'right'
-            }, function (start, end, label) {
-                console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-            });
-        });
-
-        var menuIcon = function (cell, formatterParams) { //plain text value
-            return "<span class='h-8 w-8 rounded-sm border border-gray-300 flex items-center justify-center text-blue-900'><i class='fas fa-ellipsis-v'></i></span>";
-        };
-
-        var eyeIcon = function (cell, formatterParams) { //plain text value
-            return "<span class='h-8 w-8 rounded-sm border border-gray-300 flex items-center justify-center text-blue-900'><i class='far fa-eye'></i></span>";
-        };
-
-        var tabledata = [
-            { ngayhoadon: "chrishoang@cavn.vn", donvimuahang: "Công ty TNHH Du lịch Thăng Long", masothue: "0109330179", nguoimuahang: "Nguyễn Văn An", empty: "" },
-            { ngayhoadon: "chrishoang@cavn.vn", donvimuahang: "-", masothue: "-", nguoimuahang: "Nguyễn Văn An", empty: "" },
-        ];
-
-        //Build Tabulator
-        var table = new Tabulator("#example-table", {
-            data: tabledata,
-            layout: "fitColumns",
-            columns: [
-                { title: "Mã số thuế", field: "masothue", width: 139, hozAlign: "left", sorter: "number", formatter: "html" },
-                { title: "Đơn vị mua hàng", field: "donvimuahang", width: 309, hozAlign: "left", sorter: "number", formatter: "html" },
-                { title: "Người mua hàng", field: "nguoimuahang", width: 200, hozAlign: "left", sorter: "number", formatter: "html" },
-                { title: "Email", field: "ngayhoadon", width: 495, hozAlign: "left", sorter: "date", formatter: "html" },
-                { formatter: eyeIcon, width: 56, frozen: true, hozAlign: "center", cellClick: function (e, cell) { alert("Printing row data for: " + cell.getRow().getData().name) } },
-                { formatter: menuIcon, width: 56, frozen: true, hozAlign: "center", cellClick: function (e, cell) { alert("Printing row data for: " + cell.getRow().getData().name) } },
-            ],
         });
     </script>
 </body>

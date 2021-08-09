@@ -22,7 +22,6 @@ var tabledata = [
 var table = new Tabulator("#example-table", {
     data: tabledata,
     // layout: "fitColumns",
-    height: "311px",
     layout: "fitDataStretch",
     columns: [
         { title: "Hồ sơ thông báo", field: "mauso", width: 170, hozAlign: "center", formatter: "html" },

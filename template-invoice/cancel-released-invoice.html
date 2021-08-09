@@ -8,6 +8,28 @@
     <link rel="stylesheet" href="../build/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/tabulator/css/semantic-ui/tabulator_semantic-ui.min.css">
+    <style>
+        .tabulator-col:nth-child(1) .tabulator-col-content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .tabulator {
+            border-radius: 0 !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            border: none !important;
+        }
+
+        .tabulator-headers .tabulator-col {
+            border-right: 1px dashed #dfe1e5;
+        }
+
+        .tabulator-row .tabulator-cell {
+            border-right: 1px dashed #dfe1e5;
+        }
+    </style>
     <title>Mẫu hóa đơn</title>
 </head>
 
@@ -268,170 +290,16 @@
                             class="transition duration-200 ease-in transform absolute -left-3 top-6 h-6 w-6 shadow flex justify-center items-center rounded-full bg-white cursor-pointer">
                             <i class="fas fa-chevron-left fa-xs"></i>
                         </div>
-                        <div class="flex justify-between mb-5">
-                            <div class="text-xl font-medium text-blue-900">Mẫu hóa đơn</div>
-                            <a href="./template-invoice/create-template-invoice.html">
+                        <div class="flex justify-between mb-8">
+                            <div class="text-xl font-medium text-blue-900">Hồ sơ thông báo thu hồi</div>
+                            <a href="../template-invoice/create-cancel-file.html">
                                 <div
                                     class="flex items-center justify-center mr-5 h-8 w-28 ml-3 focus:outline-none font-medium text-sm bg-blue-900 text-white rounded">
-                                    Tạo mẫu mới
+                                    Tạo hồ sơ
                                 </div>
                             </a>
                         </div>
-
-                        <div class="w-3/5 py-5 border-b border-dashed border-gray-300 flex">
-                            <div class="mr-5 w-40"><img class="w-full" src="./assets/img/template-invoice.png" alt="">
-                            </div>
-                            <div class="flex flex-col w-full justify-between h-44">
-                                <div>
-                                    <div class="flex justify-between mb-1.5">
-                                        <div class="text-sm text-blue-900">Hóa đơn giá trị gia tăng</div>
-                                        <div class="text-sm font-medium text-blue-900">01GTKT0/001 - CM/19E</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div class="text-sm flex items-center text-blue-900 font-medium">
-                                            <div>Hóa đơn dành cho khối dịch vụ - 01</div>
-                                            <a href="#" class="ml-5"><i class="fas fa-edit"></i></a>
-                                        </div>
-                                        <div class="text-sm flex items-center text-blue-900">
-                                            <div class="h-2 w-2 rounded-full bg-blue-600 mr-2"></div>
-                                            <div>Đã có hiệu lực</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-end">
-                                    <div>
-                                        <div class="font-medium text-sm text-blue-900 mb-2.5">Còn: 198 số</div>
-                                        <div class="flex text-blue-900">
-                                            <div class="text-center">
-                                                <div class="text-lg font-medium mb-1">0000011</div>
-                                                <div class="text-xs">Số hiện tại</div>
-                                            </div>
-                                            <div class="text-base font-medium mx-4">-</div>
-                                            <div class="text-center">
-                                                <div class="text-lg font-medium mb-1">0000199</div>
-                                                <div class="text-xs">Số kết thúc</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex">
-                                        <button
-                                            class="h-8 w-28 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
-                                            Phát hành
-                                        </button>
-                                        <a href="#"
-                                            class='ml-1.5 h-8 w-8 rounded-sm border border-gray-100 flex items-center justify-center text-blue-900'><i
-                                                class='far fa-eye'></i></a>
-                                        <a href="#"
-                                            class='ml-1.5 h-8 w-8 rounded-sm border border-gray-100 flex items-center justify-center text-blue-900'><i
-                                                class='fas fa-ellipsis-v'></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-3/5 py-5 border-b border-dashed border-gray-300 flex">
-                            <div class="mr-5 w-40"><img class="w-full" src="./assets/img/template-invoice.png" alt="">
-                            </div>
-                            <div class="flex flex-col w-full justify-between h-44">
-                                <div>
-                                    <div class="flex justify-between mb-1.5">
-                                        <div class="text-sm text-blue-900">Hóa đơn giá trị gia tăng</div>
-                                        <div class="text-sm font-medium text-blue-900">01GTKT0/001 - AA/19E</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div class="text-sm flex items-center text-blue-900 font-medium">
-                                            <div>Hóa đơn dành cho khối dịch vụ - 02</div>
-                                            <a href="#" class="ml-5"><i class="fas fa-edit"></i></a>
-                                        </div>
-                                        <div class="text-sm flex items-center">
-                                            <div class="h-2 w-2 rounded-full bg-gray-300 mr-2"></div>
-                                            <div class="text-gray-400">Chưa có hiệu lực</div>
-                                            <div class="mx-2">-</div>
-                                            <a href="#" class="text-sm text-blue-600">Điều chỉnh</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-end">
-                                    <div>
-                                        <div class="text-sm text-blue-900 mb-2.5">Chưa phát hành</div>
-                                        <div class="flex text-gray-300">
-                                            <div class="text-center">
-                                                <div class="text-lg font-medium mb-1">0000000</div>
-                                                <div class="text-xs">Số hiện tại</div>
-                                            </div>
-                                            <div class="text-base font-medium mx-4">-</div>
-                                            <div class="text-center">
-                                                <div class="text-lg font-medium mb-1">0000000</div>
-                                                <div class="text-xs">Số kết thúc</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex">
-                                        <button
-                                            class="h-8 w-28 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
-                                            Phát hành
-                                        </button>
-                                        <a href="#"
-                                            class='ml-1.5 h-8 w-8 rounded-sm border border-gray-100 flex items-center justify-center text-blue-900'><i
-                                                class='far fa-eye'></i></a>
-                                        <a href="#"
-                                            class='ml-1.5 h-8 w-8 rounded-sm border border-gray-100 flex items-center justify-center text-blue-900'><i
-                                                class='fas fa-ellipsis-v'></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="w-3/5 py-5 flex">
-                            <div class="mr-5 w-40"><img class="w-full" src="./assets/img/template-invoice.png" alt="">
-                            </div>
-                            <div class="flex flex-col w-full justify-between h-44">
-                                <div>
-                                    <div class="flex justify-between mb-1.5">
-                                        <div class="text-sm text-blue-900">Hóa đơn giá trị gia tăng</div>
-                                        <div class="text-sm font-medium text-blue-900">01GTKT0/001 - AA/19E</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div class="text-sm flex items-center text-blue-900 font-medium">
-                                            <div>Hóa đơn dành cho khối dịch vụ - 03</div>
-                                            <a href="#" class="ml-5"><i class="fas fa-edit"></i></a>
-                                        </div>
-                                        <div class="text-sm flex items-center text-blue-900">
-                                            <div class="h-2 w-2 rounded-full bg-red-600 mr-2"></div>
-                                            <div>Đã thu hồi</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-end">
-                                    <div>
-                                        <div class="text-sm text-blue-900 mb-2.5">Chưa phát hành</div>
-                                        <div class="flex text-gray-300">
-                                            <div class="text-center">
-                                                <div class="text-lg font-medium mb-1">0000000</div>
-                                                <div class="text-xs">Số hiện tại</div>
-                                            </div>
-                                            <div class="text-base font-medium mx-4">-</div>
-                                            <div class="text-center">
-                                                <div class="text-lg font-medium mb-1">0000000</div>
-                                                <div class="text-xs">Số kết thúc</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="flex">
-                                        <button
-                                            class="h-8 w-28 focus:outline-none font-medium text-sm bg-white border border-gray-300 text-blue-900 rounded">
-                                            Phát hành
-                                        </button>
-                                        <a href="#"
-                                            class='ml-1.5 h-8 w-8 rounded-sm border border-gray-100 flex items-center justify-center text-blue-900'><i
-                                                class='far fa-eye'></i></a>
-                                        <a href="#"
-                                            class='ml-1.5 h-8 w-8 rounded-sm border border-gray-100 flex items-center justify-center text-blue-900'><i
-                                                class='fas fa-ellipsis-v'></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <div id="example-table"></div>
                     </div>
                 </div>
             </div>
@@ -439,7 +307,41 @@
     </div>
 
     <script src="../assets/jquery-3.6.0.min.js"></script>
-    <script src="../assets/js/template-invoice.js"></script>
+    <script src="../assets/tabulator/js/tabulator.min.js"></script>
+    <script>
+        $("#show-menu-btn").click(function () {
+            $("#show-menu-btn").toggleClass("rotate-180");
+            $("#right-panel").toggleClass("left-64.5");
+            $("#right-panel").toggleClass("left-0");
+        });
+
+        var menuIcon = function (cell, formatterParams) { //plain text value
+            return "<span class='h-8 w-8 rounded-sm border border-gray-300 flex items-center justify-center text-blue-900'><i class='fas fa-trash'></i></span>";
+        };
+
+        var eyeIcon = function (cell, formatterParams) { //plain text value
+            return "<span class='h-8 w-8 rounded-sm border border-gray-300 flex items-center justify-center text-blue-900'><i class='far fa-eye'></i></span>";
+        };
+
+        var tabledata = [
+            { id: 1, mauso: "TBTHD00088", ngayhoadon: "25/07/2020", sohoadon: "Chưa nộp cho CQ Thuế" },
+            { id: 2, mauso: "TBTHD00088", ngayhoadon: "25/07/2020", sohoadon: "Chưa nộp cho CQ Thuế" },
+            { id: 3, mauso: "TBTHD00088", ngayhoadon: "25/07/2020", sohoadon: "Chưa nộp cho CQ Thuế" },
+        ];
+
+        //Build Tabulator
+        var table = new Tabulator("#example-table", {
+            data: tabledata,
+            layout: "fitColumns",
+            columns: [
+                { title: "Thông báo thu hồi", field: "mauso", width: 190, hozAlign: "left", formatter: "html" },
+                { title: "Ngày tạo", field: "ngayhoadon", width: 120, hozAlign: "center", sorter: "date", formatter: "html" },
+                { title: "Trạng thái", field: "sohoadon", hozAlign: "left", sorter: "number", formatter: "html" },
+                { formatter: eyeIcon, width: 56, frozen: true, hozAlign: "center", cellClick: function (e, cell) { alert("Printing row data for: " + cell.getRow().getData().name) } },
+                { formatter: menuIcon, width: 56, frozen: true, hozAlign: "center", cellClick: function (e, cell) { alert("Printing row data for: " + cell.getRow().getData().name) } },
+            ],
+        });
+    </script>
 </body>
 
 </html>
